@@ -58,7 +58,7 @@
     <Compile Include="DataAccess.Android.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="HybridWebView.cs" />
-    <Compile Include="FileAccess.cs" />
+    <Compile Include="ResourceManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

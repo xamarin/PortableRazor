@@ -30,6 +30,30 @@ namespace PortableCongress
 			}
 		}
 
+		public static async Task<Committees> GetCommitteesAsync(int id, string bioGuideId)
+		{
+			using (var httpClient = new HttpClient ()) {
+				string url = String.Format ("http://services.sunlightlabs.com/api/committees.allForLegislator.xml?apikey=f20b44ed08e145a524d10d8dbeb4b911&bioguide_id={0}", bioGuideId);
+
+				var response = await httpClient.GetAsync (url);
+				var stream = await response.Content.ReadAsStreamAsync ();
+				var committeeList = LoadCommittees (stream);
+				var committees = new Committees { Id = id, CommitteeList = committeeList };
+
+				return committees;	
+			}
+		}
+
+		static List<Committee> LoadCommittees (Stream stream)
+		{
+			XDocument committeeData = XDocument.Load (stream);
+
+			var committeeList = (from c in committeeData.Descendants ("committee")
+				select new Committee { Name = c.Element ("name").Value }).ToList ();
+
+			return committeeList;
+		}
+
 		static List<Vote> LoadVotes (Stream stream)
 		{
 			XDocument voteFeed = XDocument.Load (stream);

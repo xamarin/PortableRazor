@@ -18,11 +18,10 @@ namespace PortableCongress
 		public string Party { get; set; }
 		public string State { get; set; }
 
-		//HACK
 		int id;
 		public int Id {
-			get{
-				id = 400050; //int.Parse (GovTrackId); //causes exception on line 64 in RouteHandler
+			get {
+				id = int.Parse (GovTrackId);
 				return id;
 			}
 			set{ id = value; }

@@ -178,7 +178,16 @@ WriteLiteral(">\n\t\t\t<li>");
 
 #line default
 #line hidden
-WriteLiteral("</li>\n\t\t\t<li>Committees</li>\n\t\t</ul> \n\t</div>\n\n</body>\n</html>\n");
+WriteLiteral("</li>\n\t\t\t<li>");
+
+
+#line 32 "PoliticianView.cshtml"
+  Write(Html.ActionLink("Committees", "ShowCommittees", new {id = @Model.Id, bioguideid = @Model.BioGuideId }));
+
+
+#line default
+#line hidden
+WriteLiteral("</li>\n\t\t</ul> \n\t</div>\n\n</body>\n</html>\n");
 
 }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -34,6 +34,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IDataAccess.cs" />
+    <Compile Include="Models\Vote.cs" />
     <Compile Include="Models\Politician.cs" />
     <Compile Include="Controllers\PoliticianController.cs" />
     <Compile Include="Views\PoliticianList.cs">
@@ -45,9 +46,13 @@
     <Compile Include="Views\RecentVotesList.cs">
       <DependentUpon>RecentVotesList.cshtml</DependentUpon>
     </Compile>
-    <Compile Include="Models\Vote.cs" />
     <Compile Include="Models\RecentVotes.cs" />
     <Compile Include="WebAccess.cs" />
+    <Compile Include="Views\CommitteeList.cs">
+      <DependentUpon>CommitteeList.cshtml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Committee.cs" />
+    <Compile Include="Models\Committees.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -70,6 +75,10 @@
       <LastGenOutput>RecentVotesList.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Views\CommitteeList.cshtml">
+      <Generator>RazorTemplatePreprocessor</Generator>
+      <LastGenOutput>CommitteeList.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Scripts\jquery.mobile-1.4.0.min.css" />

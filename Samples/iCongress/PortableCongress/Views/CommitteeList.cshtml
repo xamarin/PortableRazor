@@ -1,0 +1,28 @@
+﻿@inherits PortableRazor.ViewBase
+@model Committees
+
+<html>
+<head>
+	<link rel="stylesheet" href="jquery.mobile-1.4.0.min.css" />
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body>
+	<div data-role="header" style="overflow:hidden;" data-position="fixed">
+		@Html.ActionLink("Back", "ShowPoliticianView", new {id = @Model.Id}, new { 
+			@class="ui-btn-left ui-btn ui-icon-back ui-btn-icon-notext ui-shadow ui-corner-all",
+			data_icon = "arrow-l", 
+			data_role="button", 
+			data_mini="true", 
+			data_inline="true", 
+			data_transition="slide"})
+    	<h1>Committees</h1>
+    </div>		
+
+	<ul data-role="listview" data-inset="true">
+		@foreach(var committee in Model.CommitteeList) {
+			<li><h4>@committee.Name</h4></li>
+		}
+	</ul>
+</body>
+</html>

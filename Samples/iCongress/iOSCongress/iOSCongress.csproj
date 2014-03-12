@@ -109,7 +109,7 @@
     <Compile Include="DataAccess.iOS.cs" />
     <Compile Include="HybridWebView.cs" />
     <Compile Include="..\AndroidCongress\FileAccess.cs">
-      <Link>FileAccess.cs</Link>
+      <Link>ResourceManager.cs</Link>
     </Compile>
     <Compile Include="CongressViewController.cs" />
     <Compile Include="CongressViewController.designer.cs">
