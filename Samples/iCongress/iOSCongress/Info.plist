@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>iCongress</string>
+	<string>Portable Congress</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.xamarin.iCongress</string>
+	<string>com.xamarin.iOSCongress</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
