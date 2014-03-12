@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+    </dependencies>
+    <scenes>
+        <!--class Prefix:identifier View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CongressViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="1" translatesAutoresizingMaskIntoConstraints="NO">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" type="user" id="7"/>
+                            <constraint firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="1" secondAttribute="bottom" type="user" id="8"/>
+                            <constraint firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" type="user" id="9"/>
+                            <constraint firstItem="1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" type="user" id="12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="1" id="name-outlet-1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <resources>
+        <image name="Default-568h@2x.png" width="640" height="1136"/>
+        <image name="images/icons-18-black.png" width="864" height="18"/>
+        <image name="images/icons-18-white.png" width="864" height="18"/>
+        <image name="images/icons-36-black.png" width="1728" height="36"/>
+        <image name="images/icons-36-white.png" width="1728" height="36"/>
+    </resources>
+</document>

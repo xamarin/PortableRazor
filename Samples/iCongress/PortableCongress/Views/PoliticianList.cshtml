@@ -1,0 +1,23 @@
+﻿@inherits PortableRazor.ViewBase
+@model List<Politician>
+
+<html>
+<head>
+	<link rel="stylesheet" href="jquery.mobile-1.4.0.min.css" />
+	<script src="jquery-1.10.2.min.js"></script>
+	<script src="jquery.mobile-1.4.0.min.js"></script>
+</head>
+<body>
+	<div data-role="header" style="overflow:hidden;" data-position="fixed">
+    	<h1>iCongress</h1>
+    </div>
+
+	<ul data-role="listview" data-inset="true" data-filter-placeholder="Search Congress..." data-filter="true">
+		@foreach(var p in Model) {
+			<li>
+				@Html.ActionLink(String.Format("{0} {1}", p.FirstName, p.LastName), "ShowPoliticianView", new {id = p.Id })
+			</li>
+		}
+	</ul>
+</body>
+</html>
