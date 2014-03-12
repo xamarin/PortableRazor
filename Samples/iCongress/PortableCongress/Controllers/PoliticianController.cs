@@ -34,7 +34,9 @@ namespace PortableCongress
 		}
 
 		public async void ShowRecentVotes(int id) {
-			//var votes = dataAccess.LoadRecentVotes (id);
+			webView.EvaluateJavascript ("$.mobile.loading( 'show', {\n  text: 'Loading Recent Votes ...',\n  " +
+				"textVisible: 'false',\n  theme: 'b',\n  textonly: 'false' });");
+
 			var votes = await WebAccess.GetRecentVotesAsync (id);
 
 			var template = new RecentVotesList () { Model = votes };
