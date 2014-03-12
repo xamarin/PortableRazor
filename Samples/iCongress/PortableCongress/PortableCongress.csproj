@@ -60,6 +60,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Scripts\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Content\dataimages\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\PoliticianList.cshtml">
@@ -185,8 +186,8 @@
     <EmbeddedResource Include="Content\images\icons-png\video-black.png" />
     <EmbeddedResource Include="Content\images\icons-png\video-white.png" />
     <EmbeddedResource Include="Content\images\ajax-loader.gif" />
-    <EmbeddedResource Include="App_Data\nophoto.jpg" />
     <EmbeddedResource Include="App_Data\congress.sqlite" />
+    <EmbeddedResource Include="Content\dataimages\nophoto.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Net.Http">
