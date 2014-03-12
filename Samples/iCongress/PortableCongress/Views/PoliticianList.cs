@@ -54,7 +54,7 @@ WriteLiteral(" style=\"overflow:hidden;\"");
 
 WriteLiteral(" data-position=\"fixed\"");
 
-WriteLiteral(">\n    \t<h1>iCongress</h1>\n    </div>\n\n\t<ul");
+WriteLiteral(">\n    \t<h1>Congress</h1>\n    </div>\n\n\t<ul");
 
 WriteLiteral(" data-role=\"listview\"");
 

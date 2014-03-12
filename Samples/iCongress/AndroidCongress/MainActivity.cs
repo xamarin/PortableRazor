@@ -14,7 +14,7 @@ using PortableCongress;
 
 namespace AndroidCongress
 {
-	[Activity (Label = "iCongress", MainLauncher = true)]
+	[Activity (Label = "Portable Congress", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
