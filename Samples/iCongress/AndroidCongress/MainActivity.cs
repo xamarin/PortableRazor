@@ -32,9 +32,14 @@ namespace AndroidCongress
 
 			// Use subclassed WebViewClient to intercept hybrid native calls
 			var webViewClient = new HybridWebViewClient ();
-			webViewClient.SetPoliticianController (new PoliticianController (
-				new HybridWebView (webView), 
-				new DataAccess ()));
+
+			var politicianController = new PoliticianController (
+				                           new HybridWebView (webView), 
+				                           new DataAccess ());
+
+			webViewClient.SetPoliticianController (politicianController);
+
+			PortableRazor.RouteHandler.RegisterController ("Politician", politicianController);
 
 			webView.SetWebViewClient (webViewClient);
 			webView.Settings.JavaScriptEnabled = true;
