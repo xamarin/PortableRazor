@@ -14,7 +14,7 @@ using PortableCongress;
 
 namespace AndroidCongress
 {
-	[Activity (Label = "Portable Congress", MainLauncher = true)]
+	[Activity (Label = "@string/app_name", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
