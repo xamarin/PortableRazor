@@ -48,7 +48,7 @@ namespace Congress
 			using (var connection = new SqliteConnection (connectionString)) {
 				using (var cmd = connection.CreateCommand ()) {
 					connection.Open ();
-					cmd.CommandText = String.Format ("SELECT bioguide_id, first_name, last_name,  govtrack_id, phone FROM Politician");
+                    cmd.CommandText = String.Format ("SELECT bioguide_id, first_name, last_name,  govtrack_id, phone, party, state FROM Politician ORDER BY last_name");
 
 					using (var reader = cmd.ExecuteReader ()) {
 						while (reader.Read ()) {
@@ -57,7 +57,9 @@ namespace Congress
 								LastName = reader ["last_name"].ToString (),
 								BioGuideId = reader ["bioguide_id"].ToString (),  
 								GovTrackId = reader ["govtrack_id"].ToString (), 
-								Phone = reader ["phone"].ToString ()
+                                Phone = reader ["phone"].ToString (),
+                                State = reader ["state"].ToString (),
+                                Party = reader ["party"].ToString ()
 							});
 						}
 					}

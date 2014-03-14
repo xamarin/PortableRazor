@@ -46,6 +46,10 @@ WriteLiteral("></script>\n\t<script");
 
 WriteLiteral(" src=\"jquery.mobile-1.4.0.min.js\"");
 
+WriteLiteral("></script>\n\t<script");
+
+WriteLiteral(" src=\"jquery.lazyloadxt.js\"");
+
 WriteLiteral("></script>\n</head>\n<body>\n\t<div");
 
 WriteLiteral(" data-role=\"header\"");
@@ -67,33 +71,66 @@ WriteLiteral(" data-filter=\"true\"");
 WriteLiteral(">\n");
 
 
-#line 16 "PoliticianList.cshtml"
+#line 17 "PoliticianList.cshtml"
 		
 
 #line default
 #line hidden
 
-#line 16 "PoliticianList.cshtml"
+#line 17 "PoliticianList.cshtml"
    foreach(var p in Model) {
 
 
 #line default
 #line hidden
-WriteLiteral("\t\t\t<li>\n");
+WriteLiteral("\t\t\t<li>\n\t\t\t\t<a");
 
-WriteLiteral("\t\t\t\t");
+WriteAttribute ("href", " href=\"", "\""
+
+#line 19 "PoliticianList.cshtml"
+, Tuple.Create<string,object,bool> ("", Url.Action("ShowPoliticianView", new {id = p.Id })
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral(">\n\t\t\t\t\t<img");
+
+WriteLiteral(" src=\"loader.gif\"");
+
+WriteLiteral(" data-src=\"");
 
 
-#line 18 "PoliticianList.cshtml"
-Write(Html.ActionLink(String.Format("{0} {1}", p.FirstName, p.LastName), "ShowPoliticianView", new {id = p.Id }));
+#line 20 "PoliticianList.cshtml"
+                                Write(Url.Content(p.ImageName));
 
 
 #line default
 #line hidden
-WriteLiteral("\n\t\t\t</li>\n");
+WriteLiteral("\"");
+
+WriteLiteral("/>\n    \t\t\t\t<h2>");
 
 
-#line 20 "PoliticianList.cshtml"
+#line 21 "PoliticianList.cshtml"
+       Write(Html.Label(String.Format("{0} {1}", p.FirstName, p.LastName)));
+
+
+#line default
+#line hidden
+WriteLiteral("</h2>\n    \t\t\t\t<p>");
+
+
+#line 22 "PoliticianList.cshtml"
+      Write(Html.Label(String.Format("{0} {1}", p.Party, p.State)));
+
+
+#line default
+#line hidden
+WriteLiteral("</p>\n\t\t\t\t</a>\n\t\t\t</li>\n");
+
+
+#line 25 "PoliticianList.cshtml"
 		}
 
 

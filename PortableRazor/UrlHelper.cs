@@ -18,6 +18,13 @@ namespace PortableRazor.Web.Mvc
 			return System.Net.WebUtility.UrlEncode (url);
 		}
 
+        public string Content(string contentPath){
+
+            //ASP.NET MVC calls this -> return GenerateContentUrl(contentPath, RequestContext.HttpContext);
+
+            return contentPath; //TODO: implement this method
+		}
+
 		public string Action(
 			string actionName, 
 			string controllerName = "", 

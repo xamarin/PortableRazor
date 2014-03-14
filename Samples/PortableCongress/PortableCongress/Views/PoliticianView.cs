@@ -133,10 +133,21 @@ WriteLiteral(" ");
 
 #line default
 #line hidden
-WriteLiteral("</h4>\n\t    <p>");
+WriteLiteral("</h4>\n\t    <p><img");
 
+WriteAttribute ("src", " src=\'", "\'"
 
 #line 24 "PoliticianView.cshtml"
+, Tuple.Create<string,object,bool> ("", Model.ImageName
+
+#line default
+#line hidden
+, false)
+);
+WriteLiteral("/></p>\n\t    <p>");
+
+
+#line 25 "PoliticianView.cshtml"
    Write(Model.Phone);
 
 
@@ -145,7 +156,7 @@ WriteLiteral("</h4>\n\t    <p>");
 WriteLiteral("</p>\n\t\t<p>");
 
 
-#line 25 "PoliticianView.cshtml"
+#line 26 "PoliticianView.cshtml"
 Write(Model.OfficeAddress);
 
 
@@ -172,7 +183,7 @@ WriteLiteral(" data-inset=\"false\"");
 WriteLiteral(">\n\t\t\t<li>");
 
 
-#line 31 "PoliticianView.cshtml"
+#line 32 "PoliticianView.cshtml"
   Write(Html.ActionLink("Recent Votes", "ShowRecentVotes", new {id = @Model.Id }));
 
 
@@ -181,7 +192,7 @@ WriteLiteral(">\n\t\t\t<li>");
 WriteLiteral("</li>\n\t\t\t<li>");
 
 
-#line 32 "PoliticianView.cshtml"
+#line 33 "PoliticianView.cshtml"
   Write(Html.ActionLink("Committees", "ShowCommittees", new {id = @Model.Id, bioguideid = @Model.BioGuideId }));
 
 
