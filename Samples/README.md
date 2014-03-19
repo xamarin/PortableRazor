@@ -1,0 +1,1 @@
+PortableCongress app moved to https://github.com/xamarin/PortableRazorStarterKit
