@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PortableRazor</id>
-    <version>1.0.0.1</version>
+    <version>1.1.0.0</version>
     <title>PortableRazor Plugin for Xamarin and Windows</title>
     <authors>Joseph Hill</authors>
     <owners>Joseph Hill</owners>
@@ -16,7 +16,10 @@
     <summary>
       PortableRazor is a mobile framework that provides a lightweight implementation of ASP.NET MVC APIs along with a simple route handler. Combined, these features encapsulate the construction of hybrid-friendly URLs inside of a webview, and provide the hooks to intercept these URLs in order to call .NET code.
     </summary>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes>
+      - Removes ResourceLoader. (Use EmbeddedResource Plugin for Xamarin and Windows instead.)
+      - Adds BasePath property to IHybridWebView (so resources can be managed from PCL).
+    </releaseNotes>
     <copyright>Copyright 2014, Xamarin Inc.</copyright>
     <tags>xamarin, pcl, xam.pcl, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios</tags>
   </metadata>
