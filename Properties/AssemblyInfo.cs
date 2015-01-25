@@ -19,4 +19,8 @@ using System.Runtime.CompilerServices;
 // if desired. See the Mono documentation for more information about signing.
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
+[assembly:LinkerSafe]
 
+class LinkerSafeAttribute : System.Attribute {
+	public LinkerSafeAttribute() : base () {}
+}
