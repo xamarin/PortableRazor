@@ -7,9 +7,11 @@ namespace PortableRazor
 	//This was copied from the generated .cs for one of the razor views
 	public abstract class ViewBase
 	{
-		public static string UrlScheme { get { return String.Format("{0}:", UrlProtocol); } }
-
-		public static string UrlProtocol { get { return "hybrid"; } }
+		private static string scheme;
+		public static string UrlScheme {
+			get { return scheme ?? "hybrid:"; }
+			set { scheme = value; }
+		}
 
 		public HtmlHelper Html { get; private set; }
 

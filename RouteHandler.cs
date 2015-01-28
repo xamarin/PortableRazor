@@ -13,7 +13,7 @@ namespace PortableRazor
 
 		static RouteHandler ()
 		{
-			Controllers = new Dictionary<string, object> ();
+			Controllers = new Dictionary<string, object> (StringComparer.OrdinalIgnoreCase);
 			defaultControllerName = String.Empty;
 		}
 

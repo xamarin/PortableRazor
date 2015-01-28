@@ -29,18 +29,18 @@ namespace PortableRazor.Web.Mvc
 			string actionName, 
 			string controllerName = "", 
 			object routeValues = null, 
-			string protocol = "", 
+			string scheme = "", 
 			string hostName = "") {
 
-			if (String.IsNullOrEmpty(protocol))
-				protocol = ViewBase.UrlProtocol;
+			if (String.IsNullOrEmpty(scheme))
+				scheme = ViewBase.UrlScheme;
 
 			var qs = GenerateQueryString (routeValues);
 			if (qs.Length > 0)
 				qs = "?" + qs;
 
-			return string.Format ("{0}:{1}{2}{3}{4}", 
-				protocol,
+			return string.Format ("{0}{1}{2}{3}{4}", 
+				scheme,
 				String.IsNullOrEmpty(hostName) ? String.Empty : hostName + ".",
 				String.IsNullOrEmpty(controllerName) ? String.Empty : controllerName + "/",
 				actionName, 

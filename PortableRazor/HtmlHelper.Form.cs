@@ -15,8 +15,8 @@ namespace PortableRazor.Web.Mvc
 			if (qs.Length > 0)
 				qs = "?" + qs;
 
-			var form = String.Format ("<form action=\"{0}:{1}{2}{3}\" method=\"{4}\"{5}>", 
-				ViewBase.UrlProtocol,
+			var form = String.Format ("<form action=\"{0}{1}{2}{3}\" method=\"{4}\"{5}>", 
+				ViewBase.UrlScheme,
                 String.IsNullOrEmpty (controllerName) ? String.Empty : controllerName + "/", 
                 actionName, 
 				qs, 

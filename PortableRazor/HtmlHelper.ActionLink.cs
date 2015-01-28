@@ -17,8 +17,8 @@ namespace PortableRazor.Web.Mvc
 			if (qs.Length > 0)
 				qs = "?" + qs;
 
-			return new HtmlString(string.Format ("<a href=\"{0}:{1}{2}{3}\"{4}>{5}</a>",
-				ViewBase.UrlProtocol,
+			return new HtmlString(string.Format ("<a href=\"{0}{1}{2}{3}\"{4}>{5}</a>",
+				ViewBase.UrlScheme,
 				string.IsNullOrEmpty(controllerName) ? String.Empty : controllerName + "/",
 				actionName, 
 				qs,
