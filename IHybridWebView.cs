@@ -4,7 +4,7 @@ namespace PortableRazor
 {
 	public interface IHybridWebView
 	{
-		string BasePath { get; set; }
+		string BasePath { get; }
 
 		void LoadHtmlString(string html);
 
