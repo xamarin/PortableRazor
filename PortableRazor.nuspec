@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PortableRazor</id>
-    <version>1.2.0.0</version>
+    <version>1.3.0.0</version>
     <title>PortableRazor Plugin for Xamarin and Windows</title>
     <authors>Joseph Hill</authors>
     <owners>Joseph Hill</owners>
@@ -17,11 +17,8 @@
       PortableRazor is a mobile framework that provides a lightweight implementation of ASP.NET MVC APIs along with a simple route handler. Combined, these features encapsulate the construction of hybrid-friendly URLs inside of a webview, and provide the hooks to intercept these URLs in order to call .NET code.
     </summary>
     <releaseNotes>
-      - ViewBase.UrlScheme can now be changed, in order to support form
-      submission on Windows Phone (which validates that a form's action
-      is set to a valid http URL).
-      - Removes ViewBase.UrlProtocol from public API to support UrlScheme
-      change above
+      - Removes setter on IHybridWebView.BasePath Property. Each platform's IHybridWebView
+      implementation should use a BasePath that makes sense for that platform
     </releaseNotes>
     <copyright>Copyright 2014, Xamarin Inc.</copyright>
     <tags>xamarin, pcl, xam.pcl, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios</tags>
