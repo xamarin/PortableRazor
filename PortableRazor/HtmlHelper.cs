@@ -13,6 +13,10 @@ namespace PortableRazor.Web.Mvc
 			_writer = writer;
 		}
 
+		public IHtmlString Raw(string value) {
+			return new HtmlString (value);
+		}
+
 		private string GenerateHtmlAttributes(object htmlAttributes) {
 			var attrs = new StringBuilder ();
 			if (htmlAttributes != null) {
